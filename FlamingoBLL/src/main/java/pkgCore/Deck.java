@@ -46,10 +46,23 @@ public class Deck {
     	
     }
 	
-	//	DONE: Add a draw() method that will take a card from the deck and
-	//			return it to the caller
     public Card draw() {
         return cards.remove(0);
     }
-
+    
+    
+    
+    // ************************ QUIZ 3 : Unit Test in DeckTest.java ************************************//
+    public int getRemaining(Object eNum) {   		
+    		int i = 0;         		
+    		for(Card c : cards) {
+    			if(eNum instanceof eSuit && c.geteSuit() == eNum) {
+    				i++;
+    			}
+    			else if (eNum instanceof eRank && c.geteRank() == eNum) {
+    				i++;
+    			}
+    		}    		
+    		return i;   	
+    }
 }

@@ -2,7 +2,12 @@ package pkgCore;
 
 import static org.junit.Assert.*;
 
+import java.util.Collections;
+
 import org.junit.jupiter.api.Test;
+
+import pkgEnum.eRank;
+import pkgEnum.eSuit;
 
 
 
@@ -37,5 +42,19 @@ public class DeckTest {
 			
 		}
 	}
-
+	
+	@Test 
+	public void QUIZ3_Test() {
+		
+		Deck d = new Deck(1);
+		
+		System.out.println();
+		
+		System.out.println(d.draw().toString());
+		
+		assertEquals((d.getRemaining(eRank.TWO)),3);
+		
+		assertEquals((d.getRemaining(eSuit.HEARTS)),12);
+		
+	}
 }

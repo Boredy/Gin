@@ -36,5 +36,10 @@ public class Card implements Comparable {
 		//return 0;
 		return c.geteRank().compareTo(this.geteRank());
     }
+    
+    public String toString() {
+    	
+    		return this.eRank.toString() + " " + this.eSuit.toString();
+    }
 
 }
